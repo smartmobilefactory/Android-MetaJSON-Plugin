@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.smartmobilefactory.metajson:plugin:0.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.smartmobilefactory.metajson'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "com.smartmobilefactory.metajson.test"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+
+        debug {
+            debuggable true
+        }
+
+        alpha {
+            applicationIdSuffix '.alpha'
+        }
+
+        release {
+            debuggable false
+            minifyEnabled false
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+}
