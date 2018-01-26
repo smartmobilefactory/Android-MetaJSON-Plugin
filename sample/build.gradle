@@ -6,12 +6,12 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.smartmobilefactory.metajson:plugin:SNAPSHOT'
+//        classpath 'com.smartmobilefactory.metajson:plugin:SNAPSHOT'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.smartmobilefactory.metajson'
+//apply plugin: 'com.smartmobilefactory.metajson'
 
 android {
     compileSdkVersion 26
