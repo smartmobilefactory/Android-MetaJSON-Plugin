@@ -1,0 +1,12 @@
+{
+    "metaJsonVersion": "0.1",
+    "minSdkVersion": 16,
+    "targetSdkVersion": 26,
+    "compileSdkVersion": 26,
+    "buildToolsVersion": "26.0.2",
+    "gradleVersion": "3.0.1",
+    "kotlinVersion": "1.2.20",
+    "dataBinding": false,
+    "jumboMode": false,
+    "multiDex": false
+}
