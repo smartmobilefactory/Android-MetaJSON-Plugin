@@ -1,0 +1,50 @@
+{
+    "Kotlin": {
+        "nFiles": 7,
+        "blank": 50,
+        "comment": 1,
+        "code": 211
+    },
+    "Bourne Again Shell": {
+        "nFiles": 1,
+        "blank": 20,
+        "comment": 21,
+        "code": 123
+    },
+    "Groovy": {
+        "nFiles": 5,
+        "blank": 29,
+        "comment": 5,
+        "code": 111
+    },
+    "DOS Batch": {
+        "nFiles": 1,
+        "blank": 24,
+        "comment": 2,
+        "code": 64
+    },
+    "XML": {
+        "nFiles": 6,
+        "blank": 8,
+        "comment": 6,
+        "code": 53
+    },
+    "Java": {
+        "nFiles": 1,
+        "blank": 4,
+        "comment": 0,
+        "code": 10
+    },
+    "Markdown": {
+        "nFiles": 1,
+        "blank": 0,
+        "comment": 0,
+        "code": 1
+    },
+    "SUM": {
+        "blank": 135,
+        "comment": 35,
+        "code": 573,
+        "nFiles": 22
+    }
+}

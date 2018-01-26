@@ -1,9 +1,10 @@
 package com.smartmobilefactory.metajson.project
 
 internal data class ProjectData(
-        val minSdkVersion: String,
-        val targetSdkVersion: String,
-        val compileSdkVersion: String,
+        val metaJsonVersion: String,
+        val minSdkVersion: Int,
+        val targetSdkVersion: Int,
+        val compileSdkVersion: Int,
         val buildToolsVersion: String,
         val gradleVersion: String,
         val kotlinVersion: String,
