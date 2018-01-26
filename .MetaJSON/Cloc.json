@@ -1,9 +1,9 @@
 {
     "Kotlin": {
         "nFiles": 7,
-        "blank": 50,
+        "blank": 52,
         "comment": 1,
-        "code": 211
+        "code": 220
     },
     "Bourne Again Shell": {
         "nFiles": 1,
@@ -15,7 +15,7 @@
         "nFiles": 5,
         "blank": 29,
         "comment": 5,
-        "code": 111
+        "code": 110
     },
     "DOS Batch": {
         "nFiles": 1,
@@ -42,9 +42,9 @@
         "code": 1
     },
     "SUM": {
-        "blank": 135,
+        "blank": 137,
         "comment": 35,
-        "code": 573,
+        "code": 581,
         "nFiles": 22
     }
 }

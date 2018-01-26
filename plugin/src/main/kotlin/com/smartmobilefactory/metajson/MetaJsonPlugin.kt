@@ -13,6 +13,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 internal const val META_JSON_GROUP = "MetaJSON"
+internal const val CREATE_META_JSON_TASK = "createMetaJson"
 internal const val CLOC_TASK = "createClocJson"
 internal const val DEPENDENCIES_TASK = "createDependenciesJson"
 internal const val PROJECT_TASK = "createProjectJson"
@@ -43,11 +44,21 @@ open class MetaJsonPlugin : Plugin<Project> {
             task.appVariants = variant
         }
 
-        project.tasks.create(CLOC_TASK, ClocJsonTask::class.java).also(configureBaseTask)
+        val clocJsonTask = project.tasks.create(CLOC_TASK, ClocJsonTask::class.java).also(configureBaseTask)
 
-        project.tasks.create(DEPENDENCIES_TASK, DependenciesJsonTask::class.java).also(configureBaseTask)
+        val dependencyJsonTask = project.tasks.create(DEPENDENCIES_TASK, DependenciesJsonTask::class.java).also(configureBaseTask)
 
-        project.tasks.create(PROJECT_TASK, ProjectJsonTask::class.java).also(configureBaseTask)
+        val projectJsonTask = project.tasks.create(PROJECT_TASK, ProjectJsonTask::class.java).also(configureBaseTask)
+
+        project.tasks.create(CREATE_META_JSON_TASK, {
+            it.apply {
+                group = META_JSON_GROUP
+                dependsOn(projectJsonTask)
+                dependsOn(dependencyJsonTask)
+                dependsOn(clocJsonTask)
+            }
+        })
+
     }
 
     companion object {
