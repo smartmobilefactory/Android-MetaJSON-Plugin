@@ -50,19 +50,19 @@ open class MetaJsonPlugin : Plugin<Project> {
 
         val projectJsonTask = project.tasks.create(PROJECT_TASK, ProjectJsonTask::class.java).also(configureBaseTask)
 
-        project.tasks.create(CREATE_META_JSON_TASK, {
+        project.tasks.create(CREATE_META_JSON_TASK) {
             it.apply {
                 group = META_JSON_GROUP
                 dependsOn(projectJsonTask)
                 dependsOn(dependencyJsonTask)
                 dependsOn(clocJsonTask)
             }
-        })
+        }
 
     }
 
     companion object {
-        internal val VERSION = "0.1"
+        internal val VERSION = "0.2"
     }
 }
 
