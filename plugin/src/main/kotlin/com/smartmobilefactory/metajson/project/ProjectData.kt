@@ -7,8 +7,5 @@ internal data class ProjectData(
         val compileSdkVersion: Int,
         val buildToolsVersion: String,
         val gradleVersion: String,
-        val kotlinVersion: String,
-        val dataBinding: Boolean,
-        val jumboMode: Boolean,
-        val multiDex: Boolean
+        val kotlinVersion: String
 )

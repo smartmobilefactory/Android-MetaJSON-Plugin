@@ -54,11 +54,8 @@ open class ProjectJsonTask : BaseMetaJsonTask() {
                 kotlinVersion = kotlinVersion,
                 buildToolsVersion = android.buildToolsVersion,
                 compileSdkVersion = compileSdkVersion,
-                dataBinding = android.dataBinding.isEnabled,
-                jumboMode = android.dexOptions.jumboMode,
                 minSdkVersion = minSdkVersion,
-                targetSdkVersion = targetSdkVersion,
-                multiDex = multiDex
+                targetSdkVersion = targetSdkVersion
         )
 
         writeMetaJsonFile("Project.json", projectData.toJson())
